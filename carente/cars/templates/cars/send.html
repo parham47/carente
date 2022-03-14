@@ -1,0 +1,14 @@
+<head><style type="text/css">
+    body{
+     direction:rtl;
+    }
+    </style>
+</head>    
+    <h2> اضافه کردن ماشین :</h2>
+    <form action="{% url 'cars:cars.send' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+       
+        
+        <button type="submit" class="btn btn-danger">Send</button>
+    </form>

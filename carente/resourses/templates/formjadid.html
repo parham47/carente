@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}فرم ثبت ماشین{% endblock %}
+{% block content %}
+<div dir="rtl">
+
+
+  <div class="container mt-5" align="right" >
+  <label for="city">شهر مورد نظر را انتخاب کنید</label>
+  <select class="form-select" aria-label="تهران">
+    <option selected>شهر مورد نظر را انتخاب کنید</option>
+    <option value="1">تهران</option>
+    <option value="2">سمنان</option>
+    <option value="3">کیش</option>
+  </select>
+  
+  
+  <div class="row" >
+    <div class="col" >
+      <label for="sazande">سازنده مورد نظر را انتخاب کنید</label>  
+      <select class="form-select" id="sazande" name="sazande"aria-label="سازنده">
+            <option selected>نام سازند را انتخاب کنید</option>
+            <option value="benz">benz</option>
+            <option value="pride">pride</option>
+          </select>
+      </div>
+    <div class="col">
+      <label for="modelcare">مدل مورد نظر را انتخاب کنید</label>    
+      <select class="form-select" id="modelcare" aria-label="مدل">
+            <option selected>انتخاب کنید</option>
+            <option value="s500">s500</option>
+            <option value="kri">kri</option>
+          </select>
+        </div>    
+    <div class="col">
+      <label for="saltolid" >سال تولید را انتخاب کنید</label>     
+      <select class="form-select" id="saltolid" aria-label="سال ساخت" align="right">
+                <option selected>انتخاب کنید</option>
+                <option value="1400">1400</option>
+                <option value="1399">1399</option>
+                <option value="1398">1398</option>
+                <option value="1397">1397</option>
+                <option value="1396">1396</option>
+                <option value="1395">1395</option>
+                <option value="1394">1394</option>
+                <option value="1393">1393</option>
+                <option value="1392">1392</option>
+                <option value="1391">1391</option>
+                <option value="1390">1390</option>
+                <option value="1389">1389</option>
+            </select>
+      </div>
+  </div>
+  
+  <div class="form-check" align="right">
+    <input class="form-check-input" type="radio" name="gearbox" id="sade">
+    <label class="form-check-label" for="sade">
+     ساده (دستی)
+    </label>
+  </div>
+  <div class="form-check" align="right">
+    <input class="form-check-input" type="radio" name="gearbox" id="automatic" checked>
+    <label class="form-check-label" for="automatic">
+      اتوماتیک
+    </label>
+    </div>  
+    <div class="custom-file">
+    <label class="custom-file-label" for="customFile">از ماشین خود عکس بگیرید</label>
+    <input type="file" class="custom-file-input" id="customFile">
+   
+</div>
+  
+  <select class="form-select" aria-label="0-25000">
+    <option selected> کارکرد خودرو را تعین کنید </option>
+    <option value="0">0-50</option>
+    <option value="50">50-100</option>
+    <option value="100">100-150</option>
+    <option value="150">150-200</option>
+    <option value="200+">200+</option>
+  </select>
+  </div>
+
+</div>
+</div>
+{% endblock %}

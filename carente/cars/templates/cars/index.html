@@ -1,0 +1,17 @@
+{% block modelcar %}
+    cars Page 2
+{% endblock %}
+
+{% block content %}
+    <h2>{{ modelcar }} : </h2>
+    <ul>
+        {% for cars in cars %}
+            <li><a href="{% url 'cars:car' cars.vin %}">{{ cars.modelcar }}</a></li>
+        {% empty %}
+            <li>No cars are available</li>
+        {% endfor %}    
+    </ul>
+  
+    {% include "cars/layouts/pagination.html" %}
+
+{% endblock %}
